@@ -58,3 +58,11 @@
     height: 100%; /*이미지를 화면 전체 높이로 설정*/
     width: 100%; /*이미지를 화면 전체 너비로 설정*/
   }
+
+  span.carousel-control-prev-icon {
+    background-image: none;
+  }
+
+  span.carousel-control-next-icon{
+    background-image: none;
+  }

@@ -70,7 +70,7 @@ function Slide2Carousel() {
     {
       src: slide2,
       alt: 'Second slide',
-      caption: <Slide2Carousel />,
+      caption: '',
     },
     {
       src: slide3,
