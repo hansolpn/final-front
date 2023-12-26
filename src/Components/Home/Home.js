@@ -10,6 +10,8 @@ import slide1 from '../../../src/assets/img/1a459042-2795-4e80-a443-6dd6f04af18d
 import slide2 from '../../../src/assets/img/640bd914-f8d6-48da-88a5-3019f779a1fa.jpg';
 import slide3 from '../../../src/assets/img/b1089d49-a597-472b-bcc4-4b1e29074c22.jpg';
 import Header from '../Header/Header';
+import Slide2Carousel from './Slide2Carousel';
+import './Home.scss';
 
 const items = [
   {
@@ -70,28 +72,50 @@ function Home() {
     setActiveIndex(newIndex);
   };
 
-  const slides = items.map((item) => (
+  const slides = items.map((item, i) => (
     <CarouselItem
       onExiting={() => setAnimating(true)}
       onExited={() => setAnimating(false)}
       key={item.src}
+      className='carousel-main'
     >
       <img
         src={item.src}
         alt={item.alt}
       />
-      <div
-        className='carousel-caption d-none d-md-block'
-        style={{
-          // backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          fontSize: 'xx-large',
-          bottom: '75%',
-          right: '60%',
-          transform: 'translateY(50%)',
-        }}
-      >
-        {item.caption}
-      </div>
+      {i !== 1 ? (
+        <div
+          className='carousel-caption d-none d-md-block'
+          style={{
+            // backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            fontSize: 'xx-large',
+            bottom: '75%',
+            right: '60%',
+            transform: 'translateY(50%)',
+          }}
+        >
+          {item.caption}
+        </div>
+      ) : (
+        ''
+      )}
+
+      {i === 1 ? (
+        <div
+          className='carousel-caption d-none d-md-block'
+          style={{
+            // backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            fontSize: 'xx-large',
+            bottom: '30%',
+            right: '30%',
+            transform: 'translateX(20%) translateY(-15%)',
+          }}
+        >
+          <Slide2Carousel />
+        </div>
+      ) : (
+        item.caption
+      )}
     </CarouselItem>
   ));
 
@@ -114,6 +138,7 @@ function Home() {
           next={next}
           previous={previous}
           interval={false}
+          className='carousel-main'
         >
           <CarouselIndicators
             items={items}

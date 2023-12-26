@@ -12,15 +12,15 @@ import slide3 from '../../../src/assets/img/b1089d49-a597-472b-bcc4-4b1e29074c22
 
 const slide2Items = [
   {
-    src: 'path/to/your/small/image1.jpg',
+    src: slide1,
     alt: 'Small image 1',
   },
   {
-    src: 'path/to/your/small/image2.jpg',
+    src: slide1,
     alt: 'Small image 2',
   },
   {
-    src: 'path/to/your/small/image3.jpg',
+    src: slide1,
     alt: 'Small image 3',
   },
 ];
