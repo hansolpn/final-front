@@ -10,8 +10,8 @@ import slide1 from '../../../src/assets/img/1a459042-2795-4e80-a443-6dd6f04af18d
 import slide2 from '../../../src/assets/img/640bd914-f8d6-48da-88a5-3019f779a1fa.jpg';
 import slide3 from '../../../src/assets/img/b1089d49-a597-472b-bcc4-4b1e29074c22.jpg';
 import Header from '../Header/Header';
-import Slide2Carousel from './Slide2Carousel';
 import './Home.scss';
+import SlideSlick from './SlideSlick';
 
 const items = [
   {
@@ -104,14 +104,13 @@ function Home() {
         <div
           className='carousel-caption d-none d-md-block'
           style={{
-            // backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            fontSize: 'xx-large',
-            bottom: '30%',
-            right: '30%',
-            transform: 'translateX(20%) translateY(-15%)',
+            position: 'absolute',
+            bottom: '50%',
+            right: '65%',
+            transform: 'translateX(50%) translateY(-50%)',
           }}
         >
-          <Slide2Carousel />
+          <SlideSlick />
         </div>
       ) : (
         item.caption
