@@ -179,9 +179,7 @@ const CateBoardDetail = () => {
             <div>
               <div className='text-wrapperaaa'>
                 <div className='aaa'>
-                  <div className='text-wrappera4'>
-                    {data.userName.substring(0, 2)}***
-                  </div>
+                  <div className='text-wrappera4'>{data.userName}</div>
                   <div className='text-wrappera5'>{regDate}</div>
                 </div>
                 <div className='iiip'>
@@ -247,9 +245,7 @@ const CateBoardDetail = () => {
           ) : (
             <div className='content-text-wrapperaaNo'>
               <div className='aa'>
-                <div className='text-wrappera4'>
-                  {data && data.userName && data.userName.substring(0, 2)}***
-                </div>
+                <div className='text-wrappera4'>{data.userName}</div>
                 <div className='text-wrappera5'>{regDate}</div>
               </div>
               <div className='text-wrappera2'>{data.title}</div>

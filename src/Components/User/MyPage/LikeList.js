@@ -23,7 +23,6 @@ function LikeList() {
     });
 
     if (res.status === 200) {
-      console.log('data');
       setItems(res.data);
     }
   };

@@ -30,11 +30,9 @@ const SideBarContent = ({
   }, []);
 
   useEffect(() => {
-    console.log('SideBarContent', likeList, name);
     if (likeList.includes(name)) {
       setLiked(true);
       setIsWishAdd(true);
-      console.log(true);
     } else {
       setLiked(false);
       setIsWishAdd(false);
@@ -85,7 +83,6 @@ const SideBarContent = ({
         }
       })
       .then((json) => {
-        console.log(json);
         if (!json) {
           return;
         } else if (json.done === true) {
@@ -133,9 +130,6 @@ const SideBarContent = ({
     //   // 원하는 스타일 변경을 여기에 추가할 수 있습니다.
     // });
   }
-
-  console.log(onClick);
-  console.log('rt:', name, liked);
 
   return (
     <div

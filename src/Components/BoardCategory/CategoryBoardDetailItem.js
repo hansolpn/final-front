@@ -94,9 +94,7 @@ const CategoryBoardDetailItem = ({
     >
       {/* <div className='text-wrapper a1'>{item.boardId}</div> */}
       <div className='vvoo'>
-        <div className='text-wrappera34'>
-          {item.userName.substring(0, 2)}***
-        </div>
+        <div className='text-wrappera34'>{item.userName}</div>
         <div className='text-wrappera35'>({item.regDate})</div>
       </div>
       {userName === item.userName && (

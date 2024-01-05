@@ -9,7 +9,7 @@ const BoardList = ({ name, title, src, url, date, content, count, flag }) => {
 
   function truncateContent(text, maxWidth) {
     const maxCharactersPerLine = Math.floor(maxWidth / 4);
-    const maxLines = 5;
+    const maxLines = 4;
 
     let formattedText = '';
     let currentLine = 1;
